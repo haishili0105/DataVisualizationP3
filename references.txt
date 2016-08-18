@@ -1,0 +1,14 @@
+Data:
+http://www.data-explorer.com/data
+
+Bootstrap:
+http://www.w3schools.com/bootstrap/bootstrap_get_started.asp
+
+Slider:
+http://bootsnipp.com/snippets/featured/stylish-range-selectors
+
+Weight Scale SVG:
+https://thenounproject.com/term/weight-scale/256553/
+
+Balance SVG:
+https://www.iconfinder.com/

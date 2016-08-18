@@ -1,0 +1,496 @@
+div {
+	text-align: center;
+	width: 100%;
+	
+}
+
+body{
+	width: 100%;
+	background-color: #000;
+}
+
+h1{
+	margin-bottom: 0;
+}
+
+h4{
+	margin-top: 0;
+	margin-bottom: 7%;
+}
+#planetinfo #content{
+	
+	width:100%;
+	background-color: #000;
+	height: 70%;
+}
+
+#content{
+	/*width: 100%;
+	height: 100%;*/
+	background-color: #000;
+	/* this needs to have some kind of positioning, absolute
+       or relative, to have the pos of elements inside it calculated correctly,
+       since otherwise the computeTotalTransformation does not work correctly
+       (offsetParent for items would be outside the #content, and offset
+       	would be calculated relative to the parent..) */
+	/*position:relative;
+	
+	margin:35px auto 0px auto;
+	-webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.0);
+	-moz-box-shadow: 0 0px 10px rgba(0,0,0,0.0);
+    
+    overflow-y:scroll;
+    overflow-x:hidden;*/
+}
+
+#planet-name{
+	color: #fff;
+
+}
+
+#typeOfPlanet{
+	color: #72A3DB;
+}
+
+#earth-img {
+	width: 55%;
+	height: 55%;
+	/*position: relative;*/
+}
+
+#venus-img{
+	width: 10%;
+	height: 10%;
+	/*padding-right: 1.5em;*/
+	margin-right: 5%;
+	
+}
+
+#mars-img{
+	width: 7%;
+	height: 7%;
+	/*padding-left: 1.5em;*/
+	margin-left: 7%;
+}
+
+#line{
+	margin-top: 4%;
+}
+
+#diameter, #distance, #colums{
+	color: #fff;
+}
+
+#diameter, #distance{
+	font-size: 0.8em;
+	font-family: "Open Sans";
+	font-weight: lighter;
+
+}
+
+.row{
+	/*margin: 0px;*/
+	margin-top: 5%;
+	width: 100%;
+}
+
+/*#orbitalE, #rotation, #atmospheric, #mass, #gravity, #velocity{
+	text-align: left;
+	font-size: 105%;
+	color: #fff;
+	font-family: "Open Sans";
+	
+	width: 24%;
+	margin-left: 5%;
+	font-weight: lighter;
+	line-height: 1.3em;
+	float: left;
+	width: 50%;
+}
+
+#orbitalE-info, #rotation-info, #atmospheric-info, 
+#mass-info, #gravity-info,#velocity-info{
+	text-align: right;
+	font-size: 105%;
+	color: #fff;
+	font-family: "Open Sans";
+
+	/*width: 24%;*/
+	/*margin-left: 30%;*//*
+	font-weight: lighter;
+	line-height: 1.3em;
+	float: left;
+	width: 40%;
+}
+*/
+.container{
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+#info-text{
+	width: 100%;
+	text-align: right;
+	margin-left: 5%;
+}
+
+#yearTable {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+}
+
+th, td {
+	font-family:"Open Sans";
+	font-size:1em;
+	padding-left:7px;
+	padding-right:7px;
+	padding-top:4px;
+	padding-bottom:4px;
+	vertical-align:middle;
+	text-align:center;
+	text-decoration:;		
+	border-left: 1px solid #fff;		
+	border-right: 1px solid #fff;		
+	width: 101px;
+}
+
+.range {
+	display: table;
+	position: relative;
+	height: 10px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background-color: "f0f0f0";
+	border-radius: 4px;
+	/*outline: solid ;*/
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	width: 100%;		
+	margin-left: none;		
+	float: none;
+	vertical-align: middle;
+}
+
+.range input[type="range"] {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+	appearance: none !important;
+
+	display: table-cell;
+	width: 100%;
+	background-color: transparent;
+	height: 25px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.range input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+	appearance: none !important;
+
+	width: 11px;
+	height: 25px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: 0px;
+	background-color: rgb(153, 153, 153);
+}
+
+.range input[type="range"]::-moz-slider-thumb {
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
+	-ms-appearance: none !important;
+	-o-appearance: none !important;
+	appearance: none !important;
+
+	width: 11px;
+	height: 25px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	border-radius: 0px;
+	background-color: rgb(153, 153, 153);
+}
+
+.range output {
+	display: table-cell;
+	padding: 3px 5px 2px;
+	min-width: 40px;
+	color: #fff;
+	background-color: rgb(153, 153, 153);
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+/*	border-bottom-left-radius: 0;
+border-top-left-radius: 0;*/
+width: 10%;
+white-space: nowrap;
+vertical-align: middle;
+
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: -moz-none;
+-o-user-select: none;
+user-select: none;
+} 
+.range input[type="range"] {
+	outline: none;
+}
+
+#yearRange{
+	/*background-color:   #fff;*/
+	border-radius: 4px;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+/*.instruction{		
+	width: 100%;		
+	margin-left: none;		
+	float: none;		
+}*/
+
+body {
+	width: 100%;		
+	background-color: #000;		
+	text-align: center;
+	color:white;
+	margin: 0 auto;
+}
+
+.tablinks, .statstablinks {			
+	background-color: #000; 
+	color: #fff;		
+	margin: 2%;		
+	border-spacing: 10%;		
+	border-width: 3px;		
+	font-family: "Open Sans";		
+	border-color: #fff;		
+	border-style: solid;		
+	text-transform: capitalize;		
+	font-size: 12px;
+	border-radius: 10px;
+}
+
+.tablinks:hover, .statstablinks:hover{			
+	background-color: #e7e7e7; 
+	color: black;
+	background-color: #fff;		
+	color: #000;		
+	font-family: "Open Sans";		
+	border-color: #fff;		
+	border-style: solid;	
+
+}
+
+.tabClicked {
+	background-color: #e7e7e7; 
+	color: black;
+	background-color: #fff;		
+	color: #000;		
+	font-family: "Open Sans";		
+	border-color: #fff;		
+	border-style: solid;	
+
+}
+
+.container-fluid-div{				
+	background-color: black;
+	width: 100%;				
+	color: white;
+	padding: 0;				
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,1), 0 17px 50px 0 rgba(0,0,0,1);
+}
+
+.navbar-div {
+	margin-top: 5%;
+}
+
+.nav-navbar-nav{		
+	text-align: center;		
+	list-style-type: none;		
+	float: none;		
+	margin: 0 auto;		
+	padding: 0;		
+	width: 100%;		
+}
+
+.nav-navbar-nav li{		
+	display: inline-block;		
+	list-style-type: none;		
+	margin-left: 3%;		
+	margin-right: 3%;
+}
+
+table {
+	border-collapse: collapse;
+	/*border-spacing: 0;*/
+	width: 100%;
+	text-align: center;
+
+}
+
+@media screen and (min-width: 768px) {
+	.custom-collapse .collapse{
+		display:block;
+	}  
+
+	.instruction{
+		width: 40%;
+		float: left;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 10%
+		}
+
+	.range{
+		width: 40%;
+		float: left;
+		
+	}
+}
+
+
+.transition-effect{
+	-webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+	transition: width 2s, height 4s;
+}
+
+ul.tab {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+	padding-left: 20%;
+	float: left;}
+
+	/* Style the links inside the list items */
+	ul.tab li a {
+		display: inline-block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		transition: 0.3s;
+		font-size: 17px;
+	}
+
+	/* Change background color of links on hover */
+	ul.tab li a:hover {
+		background-color: #ddd;
+	}
+
+	/* Create an active/current tablink class */
+	ul.tab li a:focus, .active {
+		background-color: #ccc;
+	}
+
+	/* Style the tab content */
+	.tabcontent {
+		display: none;
+		padding: 6px 12px;
+		/*border: 1px solid #ccc;*/
+		border-top: none;
+	}
+
+	.tabcontent-default {
+		padding: 6px 12px;
+		border: 1px solid #ccc;
+		border-top: none;
+	}
+	</style>
+
+	<style type="text/css">
+	.spacer {
+		width: 100%;
+
+	}
+	#paths1 {
+		width: 100%;
+	}
+
+	#svg_rotate {
+		width: 100%;
+		background-color: black;
+	}
+
+	.pathRevo {
+		stroke-width: 0.8;
+		stroke : lightgrey;
+		opacity: 0.8;
+		fill : none
+	}
+
+	#slider {
+
+	}
+
+	#svg_slider {
+		width:80%;
+	}
+
+	.axis .domain {
+		fill: none;
+		stroke: #000;
+		stroke-opacity: .3;
+		stroke-width: 20px;
+		stroke-linecap: round;
+	}
+
+	.axis .halo {
+		fill: none;
+		stroke: #ddd;
+		stroke-width: 5px;
+		stroke-linecap: round;
+	}
+
+	.slider .handle {
+		fill: #fff;
+		stroke: #000;
+		stroke-opacity: .5;
+		stroke-width: 1.25px;
+		cursor: crosshair;
+	}
+
+	#prev-img,#next-img {		  
+		cursor: pointer;		
+	}
+
+	#line{		
+		width: 100%;		
+		text-align: center;		
+	}		
+	#Line{		
+		width: 100%;		
+		display: block;		
+	}		
+	.table-responsive{		
+		border: none;		
+	}		
+	#animate{		
+		border: none;		
+	}		
+	#text{		
+		margin: 2%;		
+	}

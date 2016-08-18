@@ -1,0 +1,204 @@
+#spacer2 {
+  width:100%;
+  height:400px;
+  background-color: yellow;
+}
+
+#switchButton {
+  position: absolute;
+  top:100px;
+}
+
+/* --------------- for temperature --------------- */
+#temperature {
+  width:100%;
+}
+#svg_temp{
+  width:100%;
+  background-color: black;
+}
+.backgroundLine {
+  stroke: white;
+  stroke-width: 1;
+  opacity: 0.3;
+  stroke-dasharray: 8,8;
+}
+
+.xAxisText, .yAxisText_C, .yAxisText_F, .yAxisText_Day, .yAxisText_Dist{
+  fill: white;
+  font-size: 100%;
+}
+.yAxisText_F {
+  display: none;
+}
+.yAxisText_U {
+  fill: white;
+  font-size: 120%;
+}
+
+.planetTemp, .planetDay, .planetDist {
+  fill:white;
+}
+
+.planetTempline {
+  stroke: white;
+  stroke-width: 3;
+  opacity: 0.5;
+  /*stroke-linecap: round;*/
+  /*stroke-dasharray: 1,8;*/
+}
+
+.tempLine {
+  stroke: white;
+  stroke-width: 1;
+  opacity: 0.65;
+}
+.tempText {
+  fill: white;
+  font-size: 95%;
+}
+
+
+/* --------------- for dayLength --------------- */
+#dayLength {
+  width:100%;
+}
+#svg_dayLength{
+ width:100%;
+ margin-left: 0%;
+ background-color: black;
+}
+
+.planetDayBar, .planetDistBar {
+  fill:white;
+  opacity: 0.3;
+}
+.dayLine {
+  stroke: white;
+  stroke-width: 1;
+  opacity: 0.5;
+}
+.dayText {
+  fill: white;
+  font-size: 85%;
+}
+/* --------------- for distance --------------- */
+#distance {
+  width:100%;
+  margin-left: 0%;
+}
+#svg_dist{
+  width:100%;
+  background-color: black;
+}
+#earthLine {
+  stroke: royalblue;
+  stroke-width: 2;
+  opacity: 0.7;
+}
+.compareLine {
+  stroke: white;
+  stroke-width: 2;
+  opacity: 0.7;
+  stroke-dasharray: 3,3;
+}
+.testLine {
+  stroke:white;
+  stroke-width:1.5;
+  opacity: 0.6;
+    /*position: absolute;
+    top:100px;*/
+  }
+
+  .compareText {
+    fill: white;
+    font-size: 85%;
+  }
+
+  /* --------------- for temperature button --------------- */
+
+  #tempSwitch {
+    /*width: 5%;*/
+    /*height:5%;*/
+  /*position: absolute;
+  top:50px;*/
+}
+.onoffswitch {
+  position: relative; width: 48px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #999999; border-radius: 42px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+  font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+content: "°C .";
+padding-right: 7px;
+background-color: #000; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+content: "°F";
+padding-right: 5px;
+background-color: #FFFFFF; color: #000;
+text-align: right;
+}
+.onoffswitch-switch {
+  display: block; width: 20px; margin:0px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 27px;
+  border: 2px solid #999999; border-radius: 42px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/* for all the detail info. */
+.detail_1 {
+  display: none;
+}
+.detail_2 {
+  display: none;
+}
+.detail_3 {
+  display: none;
+}
+
+@media screen and (min-width: 680px) {
+  #svg_temp {
+    width: 65%;
+  }
+  #svg_dayLength {
+    width: 65%;
+  }
+  #svg_dist {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #svg_temp {
+    width: 50%;
+  }
+  #svg_dayLength {
+    width: 50%;
+  }
+  #svg_dist {
+    width: 50%;
+  }
+}
